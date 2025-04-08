@@ -4,7 +4,7 @@ import mongoose, { Connection } from 'mongoose';
 const userArgs: string[] = process.argv.slice(2);
 const mongoDB: string = userArgs[0];
 
-// Connect to MongoDB
+// Connect to MongoDB.
 mongoose.connect(mongoDB)
     .then(() => {
         const db: Connection = mongoose.connection;
