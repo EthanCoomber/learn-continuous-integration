@@ -1,0 +1,23 @@
+name: Setup and Deploy
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  setup-and-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Remove Existing DB
+        run: npx ts-node remove_db.ts "mongodb://127.0.0.1:27017/my_library_db"
+      
+      - name: Insert Sample DB
+        run: npx ts-node insert_sample_data.ts "mongodb://127.0.0.1:27017/my_library_db"
+      
