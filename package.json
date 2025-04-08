@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "npx jest tests/",
-    "insert-sample-data": "npx ts-node insert_sample_data.ts",
-    "remove-sample-data": "npx ts-node remove_db.ts"
+    "insert-sample-data": "npx ts-node insert_sample_data.ts mongodb://127.0.0.1:27017/my_library_db",
+    "remove-sample-data": "npx ts-node remove_db.ts mongodb://127.0.0.1:27017/my_library_db"
   }
 }
