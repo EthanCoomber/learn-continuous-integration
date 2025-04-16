@@ -8,7 +8,7 @@ console.log(
   'This script populates some test books, authors, genres and bookinstances to your database. Specified database as argument - e.g.: npx ts-node insert_sample_data.ts "mongodb://127.0.0.1:27017/my_library_db"'
 );
 
-// Get arguments passed on command line
+// Get arguments passed on command line.
 const userArgs = process.argv.slice(2);
 
 const genres: IGenre[] = [];
